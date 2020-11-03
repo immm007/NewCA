@@ -32,7 +32,9 @@ def generate(project_year, batch):
     df = df.drop(index = drop_nums)
     return df
 
-df1 = generate('2016','2020.03')
-df2 = generate('2017','2020.03')
-df = df1.append(df2)
-df.to_excel('2020.03.xls')
+df1 = generate('2016','2020.11')
+df2 = generate('2017','2020.11')
+df3 = generate('2018','2020.11')
+df4 = generate('2019','2020.11')
+df = df1.append([df2,df3,df4])
+df.to_excel('2020.11.xls')
